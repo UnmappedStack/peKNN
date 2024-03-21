@@ -31,6 +31,6 @@ Time taken by normal KNN: 34 microseconds
 Time taken by optimised KNN: 21 microseconds
 
 Average normal KNN time: 410 microseconds
-Average optimised KNN time: 335
+Average optimised KNN time: 335 microseconds
 
 On average, the optimised KNN is 20% faster than normal KNN with this dataset and these hyperparameters.
