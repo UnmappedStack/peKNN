@@ -1,0 +1,36 @@
+This is a list of the times taken by the normal KNN and the peKNN models on a very small dataset to average out after.
+
+Time taken by normal KNN: 44 microseconds
+Time taken by optimised KNN: 36 microseconds
+
+Time taken by normal KNN: 44 microseconds
+Time taken by optimised KNN: 32 microseconds
+
+Time taken by normal KNN: 38 microseconds
+Time taken by optimised KNN: 31 microseconds
+
+Time taken by normal KNN: 30 microseconds
+Time taken by optimised KNN: 24 microseconds
+
+Time taken by normal KNN: 40 microseconds
+Time taken by optimised KNN: 32 microseconds
+
+Time taken by normal KNN: 40 microseconds
+Time taken by optimised KNN: 36 microseconds
+
+Time taken by normal KNN: 62 microseconds
+Time taken by optimised KNN: 25 microseconds
+
+Time taken by normal KNN: 39 microseconds
+Time taken by optimised KNN: 32 microseconds
+
+Time taken by normal KNN: 39 microseconds
+Time taken by optimised KNN: 34 microseconds
+
+Time taken by normal KNN: 34 microseconds
+Time taken by optimised KNN: 21 microseconds
+
+Average normal KNN time: 410 microseconds
+Average optimised KNN time: 335
+
+On average, the optimised KNN is 20% faster than normal KNN with this dataset and these hyperparameters.
