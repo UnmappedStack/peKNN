@@ -4,10 +4,26 @@
 #include <vector>
 #include <cmath>
 #include <utility>
+#include <unordered_map>
 using namespace std;
 using namespace std::chrono;
 
-// This is literally just a KNN normal thingy for now
+string mostCommonString(const vector<string>& strings) {
+    unordered_map<string, int> frequencyMap;
+    
+    // Count occurrences of each string
+    for (const string& str : strings) {
+        frequencyMap[str]++;
+    }
+    
+    // Find the string with the maximum count
+    auto maxFreqIter = max_element(frequencyMap.begin(), frequencyMap.end(),
+        [](const auto& a, const auto& b) {
+            return a.second < b.second;
+        });
+    
+    return maxFreqIter != frequencyMap.end() ? maxFreqIter->first : ""; // Return the most common string, or an empty string if the vector is empty
+}
 
 float euclidean2d(float x1, float y1, float x2, float y2) {
   float xdiff = abs(x1 - x2) * 2;
@@ -60,8 +76,9 @@ void normalknn() {
   vector<string> smallestLabels;
   for (int j = 0; j < k; j++) {
     smallestLabels.push_back(labels[smallestIndexesVec[j]]);
-    cout << labels[smallestIndexesVec[j]] << endl;
   }
+  string finalResult = mostCommonString(smallestLabels);
+  cout << "Model output: " << finalResult << endl;
 }
 
 void optimisedknn() {
@@ -104,8 +121,9 @@ void optimisedknn() {
   // Get their labels for each smallest index
   for (int j = 0; j < k; j++) {
     smallestLabels.push_back(labels[smallestIndexesVec[j]]);
-    cout << smallestLabels1[smallestIndexesVec[j]] << endl;
   }
+  string finalResult = mostCommonString(smallestLabels);
+  cout << "Model output: " << finalResult << endl;
 }
 
 void timeNormal() {
@@ -131,7 +149,7 @@ void timeNormal() {
     // use duration cast method
     auto duration = duration_cast<microseconds>(stop - start);
  
-    cout << "Time taken by function: "
+    cout << "Time taken by normal model: "
          << duration.count() << " microseconds" << endl;
 }
 
@@ -158,7 +176,7 @@ void timeOptimised() {
     // use duration cast method
     auto duration = duration_cast<microseconds>(stop - start);
  
-    cout << "Time taken by function: "
+    cout << "Time taken by optimised model: "
          << duration.count() << " microseconds" << endl;
 }
 
