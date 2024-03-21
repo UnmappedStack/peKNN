@@ -1,9 +1,9 @@
 # peKNN
 A more efficient KNN architecture.
 
-This repo is an implementation of the paper, "Making KNN more efficient with pre-elimination".
+This repo is an implementation of the short paper, "peKNN: A more efficient KNN architecture".
 
-The paper is still in progress, so here's a brief overview.
+You can see the mini-paper [here](https://kendasi.com/peknn_paper.pdf).
 
 ## Usage
 KNN (K-nearest neighbor) is an incredibly powerful yet simple model algorithm which simply finds the most similar inputs in training data and returns it's matching outputs, often avoiding issues such as overfitting. However, KNN is also incredibly inefficient, as it has to calculate the distance from each and every training example.
