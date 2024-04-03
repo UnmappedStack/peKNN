@@ -32,4 +32,4 @@ This will return some random colours (outputs of the model) and the times for th
 You'll find in this repo a file, `times.txt`, which contains some sample times for the models. I've already run the models a few times (on Google Colab servers), and these are the results I've gotten. You can see the average times at the bottom of the file.
 
 ## License
-This project has no license, so you're free to use the code, project, and theory however you like.
+This project is under the MIT license. See LICENSE.md for more information.
